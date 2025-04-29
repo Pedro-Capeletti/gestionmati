@@ -1,9 +1,9 @@
 :root {
-  --bg: #F5ECD5; /* Fondo blanco */
+  --bg: #F5ECD5; 
   --font: "Archivo", sans-serif;
   --font-display: "Archivo Narrow", sans-serif;
-  --lightblue: #A4B465; /* Celeste pastel */
-  --blue: #626F47; /* Azul pastel */
+  --lightblue: #A4B465; 
+  --blue: #626F47; 
   --gradient: linear-gradient(35deg, var(--lightblue), var(--blue));
 }
 
@@ -35,7 +35,7 @@ main {
   height: 6rem;
   margin: 0.5rem;
   border-radius: 0.3em;
-  background-image: var(--gradient); /* Fondo de la carta */
+  background-image: var(--gradient); 
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: 0.3s;
@@ -60,7 +60,7 @@ main {
   align-items: center;
   font-size: 2.5rem;
   padding-top: 0.4rem;
-  color: #333; /* Color de texto oscuro para mayor contraste */
+  color: #333; 
 }
 
 .tarjeta__contenido::selection {
