@@ -1,0 +1,106 @@
+:root {
+  --bg: #F5ECD5; /* Fondo blanco */
+  --font: "Archivo", sans-serif;
+  --font-display: "Archivo Narrow", sans-serif;
+  --lightblue: #A4B465; /* Celeste pastel */
+  --blue: #626F47; /* Azul pastel */
+  --gradient: linear-gradient(35deg, var(--lightblue), var(--blue));
+}
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: var(--font);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.mesa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  max-width: 50rem;
+  margin: auto;
+}
+
+.tarjeta {
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+  border-radius: 0.3em;
+  background-image: var(--gradient); /* Fondo de la carta */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.tarjeta__contenido {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  background-color: #F5ECD5;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  padding-top: 0.4rem;
+  color: #333; /* Color de texto oscuro para mayor contraste */
+}
+
+.tarjeta__contenido::selection {
+  background: transparent;
+}
+
+.tarjeta.descubierta {
+  transform: rotateY(-180deg);
+}
+
+#panel-informacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DCD7C9;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  font-family: var(--font-display);
+}
+
+#panel-informacion p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+#panel-informacion button {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--gradient);
+  color: #F5ECD5;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#panel-informacion button:hover {
+  background: var(--blue);
+}
