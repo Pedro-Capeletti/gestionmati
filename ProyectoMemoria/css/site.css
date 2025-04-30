@@ -1,0 +1,33 @@
+#panel-informacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  font-family: var(--font-display);
+}
+
+#panel-informacion p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+#panel-informacion button {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--gradient);
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#panel-informacion button:hover {
+  filter: brightness(1.1);
+}
